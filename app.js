@@ -12,6 +12,7 @@ console.log(__dirname)
 const publicDirectoryPath = path.join(__dirname, './public')
 const viewPath = path.join(__dirname, './views')
 const Partial = path.join(__dirname, './partials')
+const port=process.env.PORT||3000
 
 // app.get('/', (req, res) => {
 //     res.send("Welcome to Express.js")
@@ -92,7 +93,8 @@ app.get('*', (req, res) => {
     })
     // res.send('<h1>404 Error</h1>')
 })
-app.listen(3000, () => {
-    console.log("Listening to port:3000")
+app.listen(port, () => {
+    
+    console.log("Listening to port:"+port)
 })
 
